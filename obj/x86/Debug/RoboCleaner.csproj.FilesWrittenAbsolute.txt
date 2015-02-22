@@ -1,0 +1,5 @@
+/Users/dewe/github/RoboCleaner/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/dewe/github/RoboCleaner/bin/Debug/RoboCleaner.exe.mdb
+/Users/dewe/github/RoboCleaner/bin/Debug/RoboCleaner.exe
+/Users/dewe/github/RoboCleaner/obj/x86/Debug/RoboCleaner.exe
+/Users/dewe/github/RoboCleaner/obj/x86/Debug/RoboCleaner.exe.mdb
