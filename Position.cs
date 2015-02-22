@@ -1,8 +1,4 @@
-using NUnit.Framework;
-using System;
-using RoboCleaner;
-
-namespace Tests
+namespace RoboCleaner
 {
 	public struct Position
 	{

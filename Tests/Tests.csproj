@@ -35,8 +35,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CleanerTests.cs" />
-    <Compile Include="Cleaner.cs" />
-    <Compile Include="Position.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
