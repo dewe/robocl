@@ -18,45 +18,33 @@ namespace Tests
 		[Test]
 		public void Clean_single_spot_returns_1()
 		{
-			cleaner.CleanAt(new Position(100, 100));
+			cleaner.Clean(new Position(100, 100));
 			Assert.That(cleaner.UniqueSpots() == 1);
 		}
 
 		[Test]
 		public void Clean_same_spot_twice_reports_1_unique()
 		{
-			cleaner.CleanAt(new Position(1, 1));
-			cleaner.CleanAt(new Position(1, 1));
+			cleaner.Clean(new Position(1, 1));
+			cleaner.Clean(new Position(1, 1));
 			Assert.That(cleaner.UniqueSpots() == 1);
 		}
 
 		[Test]
 		public void Clean_two_different_spots_returns_2_unique()
 		{
-			cleaner.CleanAt(new Position(1000, 1000));
-			cleaner.CleanAt(new Position(20000, 20000));
+			cleaner.Clean(new Position(1000, 1000));
+			cleaner.Clean(new Position(20000, 20000));
 			Assert.That(cleaner.UniqueSpots() == 2);
 		}
 
 		[Test]
-		public void Should_accept_max_position_values()
+		public void Should_handle_edge_case_positions()
 		{
-			cleaner.CleanAt(new Position(100000, 100000));
-			Assert.That(cleaner.UniqueSpots() == 1);
-		}
-
-		[Test]
-		public void Should_accept_min_position_values()
-		{
-			cleaner.CleanAt(new Position(-100000, -100000));
-			Assert.That(cleaner.UniqueSpots() == 1);
-		}
-
-		[Test]
-		public void Should_accept_zero_position_values()
-		{
-			cleaner.CleanAt(new Position(0, 0));
-			Assert.That(cleaner.UniqueSpots() == 1);
+			cleaner.Clean(new Position(0, 0));
+			cleaner.Clean(new Position(100000, 100000));
+			cleaner.Clean(new Position(-100000, -100000));
+			Assert.That(cleaner.UniqueSpots() == 3);
 		}
 	}
 }

@@ -1,2 +1,14 @@
-obj/
-bin/
+.DS_Store
+
+**/obj/
+**/bin/
+packages/
+
+#User Specific
+*.userprefs
+*.usertasks
+
+#Mono Project Files
+*.pidb
+*.resources
+test-results/
