@@ -39,6 +39,7 @@
   <ItemGroup>
     <Compile Include="UnitTests\CleanerTests.cs" />
     <Compile Include="UnitTests\NavigatorTests.cs" />
+    <Compile Include="FunctionalTests\ApplicationTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -52,5 +53,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UnitTests\" />
+    <Folder Include="FunctionalTests\" />
   </ItemGroup>
 </Project>
