@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Threading;
 using System.IO;
 using NUnit.Framework;
 
@@ -85,7 +84,7 @@ namespace Tests
 
             var result = stdout.ReadToEnd();
 
-            Assert.AreEqual("=> Cleaned: 40000");
+            Assert.AreEqual("=> Cleaned: 4000", result);
         }
     }
 }

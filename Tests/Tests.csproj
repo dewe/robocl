@@ -40,6 +40,7 @@
     <Compile Include="UnitTests\CleanerTests.cs" />
     <Compile Include="UnitTests\NavigatorTests.cs" />
     <Compile Include="FunctionalTests\ApplicationTests.cs" />
+    <Compile Include="UnitTests\RobotTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

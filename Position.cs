@@ -20,6 +20,11 @@ namespace RoboCleaner
 		{
 			return !(p1 == p2);
 		}
+
+        public override string ToString()
+        {
+            return string.Format("Position({0}, {1})", x, y);
+        }
 	}
 }
 

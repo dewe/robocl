@@ -73,11 +73,29 @@ namespace Tests
         }
 
         [Test]
+        public void Zero_step_should_not_move()
+        {
+            navigator.StartAt(new Position(0, 0));
+            var pos = navigator.Move("N 0");
+            Assert.AreEqual(new Position(0, 0), pos);
+        }
+
+        [Test]
         public void Starting_position_should_be_cleaned()
         {
             var position = new Position(123, 456);
             navigator.StartAt(position);
             A.CallTo(() => cleaner.Clean(position)).MustHaveHappened(Repeated.Exactly.Once);
+        }
+
+        [Test]
+        public void Zero_step_should_not_clean()
+        {
+            navigator.StartAt(new Position(10, 10));
+            A.CallTo(() => cleaner.Clean(new Position(10, 10))).MustHaveHappened(Repeated.Exactly.Once);
+
+            navigator.Move("N 0");
+            A.CallTo(() => cleaner.Clean(new Position(10, 10))).MustHaveHappened(Repeated.Exactly.Once);
         }
 
         [Test]
@@ -87,8 +105,6 @@ namespace Tests
             navigator.Move("W 10000");
             A.CallTo(() => cleaner.Clean(A<Position>._)).MustHaveHappened(Repeated.Exactly.Times(10001));
         }
-
-        // TODO: N 0 should not move
     }
 }
 

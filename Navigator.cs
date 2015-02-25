@@ -12,13 +12,13 @@ namespace RoboCleaner
 			this.cleaner = cleaner;
 		}
 
-		public void StartAt(Position position)
+		public virtual void StartAt(Position position)
 		{
 			current = position;
 			cleaner.Clean(position);
 		}
 
-		public Position Move(string command)
+		public virtual Position Move(string command)
 		{
 			var nav = command.Split(' ');
 			var direction = nav[0];
