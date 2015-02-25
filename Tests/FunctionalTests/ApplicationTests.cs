@@ -46,13 +46,14 @@ namespace Tests
         [Test]
         public void Should_report_unique_spots()
         {
-            stdin.WriteLine("1");
-            stdin.WriteLine("0 0");
-            stdin.WriteLine("N 20");
+            stdin.WriteLine("2");
+            stdin.WriteLine("10 22");
+            stdin.WriteLine("E 2");
+            stdin.WriteLine("N 1");
 
             var result = stdout.ReadToEnd();
 
-            Assert.AreEqual("=> Cleaned: 21", result);
+            Assert.AreEqual("=> Cleaned: 4", result);
         }
 
         [Test]
