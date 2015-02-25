@@ -69,24 +69,6 @@ namespace Tests
 
             Assert.AreEqual("=> Cleaned: 3", result);
         }
-
-        [Test]
-        public void Should_accept_large_input()
-        {
-            stdin.WriteLine("10000");
-            stdin.WriteLine("-50000 -50000");
-            for (int i = 0; i < 2500; i++)
-            {
-                stdin.WriteLine("N 1000");
-                stdin.WriteLine("E 1000");
-                stdin.WriteLine("S 1000");
-                stdin.WriteLine("W 1000");
-            }
-
-            var result = stdout.ReadToEnd();
-
-            Assert.AreEqual("=> Cleaned: 4000", result);
-        }
     }
 }
 
